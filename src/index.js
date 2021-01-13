@@ -6,7 +6,7 @@ import STORE from './Store';
 
 
 ReactDOM.render(
-  <App store={STORE} />,
+  <App store={STORE} dog='spark' />,
   document.getElementById('root'),
 );
 
