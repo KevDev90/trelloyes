@@ -9,6 +9,3 @@ ReactDOM.render(
   <App store={STORE} dog='spark' />,
   document.getElementById('root'),
 );
-
-
-
