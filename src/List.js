@@ -10,12 +10,15 @@ const List = (props) => (
     <div className='List-cards'>
       {props.cards.map((card) =>
         <Card
+          id={card.id}
+          onDeleteCard={props.onDeleteCard}
           key={card.id}
           title={card.title}
           content={card.content}
         />
       )}
       <button
+        onClick={() => props.onClickAdd(props.id)}
         type='button'
         className='List-add-button'>
         + Add Random Card
@@ -23,5 +26,9 @@ const List = (props) => (
     </div>
   </section>
 )
+
+List.defaultProps = {
+  onClickAdd: () => {},
+}
 
 export default List;
